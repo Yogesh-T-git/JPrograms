@@ -35,7 +35,6 @@ class BinomialHeapNode {
 	public BinomialHeapNode findMinNode()
 	{
 
-		// this keyword refers to current instance itself
 		BinomialHeapNode x = this, y = this;
 		int min = x.key;
 
