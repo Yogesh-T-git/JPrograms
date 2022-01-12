@@ -1,10 +1,7 @@
-// Java Program to Implement Binomial Heap
 
-// Importing required classes
 import java.io.*;
 
-// Class 1
-// BinomialHeapNode
+
 class BinomialHeapNode {
 
 	int key, degree;
@@ -12,7 +9,6 @@ class BinomialHeapNode {
 	BinomialHeapNode sibling;
 	BinomialHeapNode child;
 
-	// Constructor of this class
 	public BinomialHeapNode(int k)
 	{
 
@@ -23,8 +19,7 @@ class BinomialHeapNode {
 		child = null;
 	}
 
-	// Method 1
-	// To reverse
+
 	public BinomialHeapNode reverse(BinomialHeapNode sibl)
 	{
 		BinomialHeapNode ret;
@@ -36,8 +31,7 @@ class BinomialHeapNode {
 		return ret;
 	}
 
-	// Method 2
-	// To find minimum node
+
 	public BinomialHeapNode findMinNode()
 	{
 
@@ -57,8 +51,6 @@ class BinomialHeapNode {
 		return y;
 	}
 
-	// Method 3
-	// To find node with key value
 	public BinomialHeapNode findANodeWithKey(int value)
 	{
 
@@ -85,8 +77,6 @@ class BinomialHeapNode {
 		return node;
 	}
 
-	// Method 4
-	// To get the size
 	public int getSize()
 	{
 		return (
@@ -95,38 +85,32 @@ class BinomialHeapNode {
 	}
 }
 
-// Class 2
-// BinomialHeap
+
 class BinomialHeap {
 
-	// Member variables of this class
+
 	private BinomialHeapNode Nodes;
 	private int size;
 
-	// Constructor of this class
 	public BinomialHeap()
 	{
 		Nodes = null;
 		size = 0;
 	}
 
-	// Checking if heap is empty
 	public boolean isEmpty() { return Nodes == null; }
 
-	// Method 1
-	// To get the size
+
 	public int getSize() { return size; }
 
-	// Method 2
-	// Clear heap
+
 	public void makeEmpty()
 	{
 		Nodes = null;
 		size = 0;
 	}
 
-	// Method 3
-	// To insert
+
 	public void insert(int value)
 	{
 
@@ -144,8 +128,7 @@ class BinomialHeap {
 		}
 	}
 
-	// Method 4
-	// To unite two binomial heaps
+
 	private void merge(BinomialHeapNode binHeap)
 	{
 		BinomialHeapNode temp1 = Nodes, temp2 = binHeap;
@@ -209,8 +192,6 @@ class BinomialHeap {
 		}
 	}
 
-	// Method 5
-	// For union of nodes
 	private void unionNodes(BinomialHeapNode binHeap)
 	{
 		merge(binHeap);
@@ -259,15 +240,13 @@ class BinomialHeap {
 		}
 	}
 
-	// Method 6
-	// To return minimum key
+
 	public int findMinimum()
 	{
 		return Nodes.findMinNode().key;
 	}
 
-	// Method 7
-	// To delete a particular element */
+
 	public void delete(int value)
 	{
 
@@ -278,8 +257,7 @@ class BinomialHeap {
 		}
 	}
 
-	// Method 8
-	// To decrease key with a given value */
+
 	public void decreaseKeyValue(int old_value,
 								int new_value)
 	{
@@ -301,8 +279,7 @@ class BinomialHeap {
 		}
 	}
 
-	// Method 9
-	// To extract the node with the minimum key
+
 	public int extractMin()
 	{
 		if (Nodes == null)
@@ -353,8 +330,7 @@ class BinomialHeap {
 		return minNode.key;
 	}
 
-	// Method 10
-	// To display heap
+
 	public void displayHeap()
 	{
 		System.out.print("\nHeap : ");
@@ -372,47 +348,38 @@ class BinomialHeap {
 	}
 }
 
-// Class 3
-// Main class
+
 class Main {
 	public static void main(String[] args)
 	{
 
-		// Make object of BinomialHeap
+
 		BinomialHeap binHeap = new BinomialHeap();
 
-		// Inserting in the binomial heap
-		// Custom input integer values
+
 		binHeap.insert(1);
 		binHeap.insert(2);
 		binHeap.insert(3);
 		binHeap.insert(4);
 		binHeap.insert(5);
-		//binHeap.insert(6);
-		//binHeap.insert(7);
+		binHeap.insert(6);
+		binHeap.insert(7);
 
-		// Size of binomial heap
 		System.out.println("Size of the binomial heap is "
 						+ binHeap.getSize());
 
-		// Displaying the binomial heap
 		binHeap.displayHeap();
 
-		// Deletion in binomial heap
 		binHeap.delete(2);
 		
 
-		// Size of binomial heap
 		System.out.println("Size of the binomial heap is "
 						+ binHeap.getSize());
 
-		// Displaying the binomial heap
 		binHeap.displayHeap();
 
-		// Making the heap empty
 		binHeap.makeEmpty();
 
-		// checking if heap is empty
 		System.out.println(binHeap.isEmpty());
 	}
 }
