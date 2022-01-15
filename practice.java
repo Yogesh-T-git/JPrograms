@@ -53,43 +53,8 @@ class practice{
         System.out.println(a.putIfAbsent(6,'F') +""+a+""+a.putIfAbsent(6,'B') + "" + a);
         System.out.println(a.keySet() +""+ a.values() + a.entrySet());
         
-        TreeMap<Integer, Integer> tm = new TreeMap<>();
-        for(int i=1; i<=5; i++) tm.put(i,i);
-        System.out.println(tm.floorEntry(1));
-        Map.Entry<Integer, Integer> kkk = tm.floorEntry(1);
-        System.out.println(kkk.getKey());
- 
-        
-
-        
-        
-        
         
         
 
-        
-        
-        
-        
-        
-        
-
-
-        
-        
-        
-        
-    
-
-
-
-        
-
- 
-    
-
-        
-
-       
     }
 }
