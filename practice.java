@@ -52,9 +52,9 @@ class practice{
         System.out.println(a);
         System.out.println(a.putIfAbsent(6,'F') +""+a+""+a.putIfAbsent(6,'B') + "" + a);
         System.out.println(a.keySet() +""+ a.values() + a.entrySet());
-        
-        
-        
 
+
+
+        
     }
 }
