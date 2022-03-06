@@ -1,7 +1,5 @@
 import java.util.*;
-
-class practice{
-
+class practice {
 
     public static void main(String[] args){
     /*    Scanner in = new Scanner(System.in);
@@ -43,7 +41,7 @@ class practice{
         int pos = 1;
         int bmas = 1<<pos;
         System.out.println((bmas | 5) + "" + Integer.toBinaryString(103));
-        */
+        
 
         HashMap<Integer,Character> a = new HashMap<>();
         Character ch = 'A';
@@ -53,6 +51,20 @@ class practice{
         System.out.println(a.putIfAbsent(6,'F') +""+a+""+a.putIfAbsent(6,'B') + "" + a);
         System.out.println(a.keySet() +""+ a.values() + a.entrySet());
         
+        Scanner in = new Scanner(System.in);
+        String L = in.nextLine();
         
+        LinkedList<Character> ll = new LinkedList<>();
+        char a[] = L.toCharArray();
+        for(int i=0; i<a.length; i++) ll.add(a[i]);
+        for(int i=1; i<ll.size(); i=i+2) ll.add(i,' ');
+        System.out.println(ll.toString().replaceAll("[\\[\\]]", "").replaceAll(", ",""));
+        */
+       
+        
+        System.out.println("Hello");
+
+ 
     }
+
 }
