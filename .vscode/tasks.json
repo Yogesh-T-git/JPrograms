@@ -23,7 +23,7 @@
             "type": "shell",
             "command": "C:\\Java\\jdk-17\\bin\\java.exe",
             "args": [
-                "${fileBasenameNoExtension}"
+                "${file}"
             ],
             "problemMatcher": []
             
