@@ -90,21 +90,21 @@ class practice {
 
         //compute
 
-        /*
+        
         System.out.println(a2.compute(3, (k,v) -> "c") + a2); //not giving null its giving the result of func, if you replace c by null, it returns null
         System.out.println(a2.compute(2, (k,v) -> "d") + a2); //gives d
         System.out.println(a2.compute(1, (k,v) -> null) + a2); //gives null not a, if v.concat("b") given it returns ab, not a
-        */
+        
 
         //means, whatever the condition might be it gives the result of BiFunction in all condition.
 
         //computeIfAbsent
 
-        //System.out.println(a2.computeIfAbsent(3, k -> String.valueOf(k*2)) + a2); //returns value of Function, for k-non null value pair it returns null
+        System.out.println(a2.computeIfAbsent(3, k -> String.valueOf(k*2)) + a2); //returns value of Function, for k-non null value pair it returns null
 
         //computeIfPresent
 
-        //System.out.println(a2.computeIfPresent(1, (k,v) -> (v+"b")) + a2);
+        System.out.println(a2.computeIfPresent(1, (k,v) -> (v+"b")) + a2);
 
         //merge
 
